@@ -43,7 +43,7 @@ let withMessageHistory = new RunnableWithMessageHistory({
     historyMessagesKey:"chat_history"
 })
 async function main(){
-    let text = input(">>>")
+    let text = input(">>> ")
     let response = await withMessageHistory.invoke(
         {input:text},
         config
