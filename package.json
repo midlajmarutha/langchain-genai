@@ -12,6 +12,10 @@
   "dependencies": {
     "@langchain/groq": "^0.0.16",
     "dotenv": "^16.4.5",
-    "langchain": "^0.2.13"
+    "langchain": "^0.2.13",
+    "prompt-sync": "^4.2.0"
+  },
+  "devDependencies": {
+    "@types/prompt-sync": "^4.2.3"
   }
 }
