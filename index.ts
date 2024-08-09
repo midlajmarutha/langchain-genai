@@ -7,13 +7,13 @@ dotenv.config()
 let parser = new StringOutputParser();
 
 let model = new ChatGroq({
-    model: "mixtral-8x7b-32768",
+    model: "llama-3.1-8b-instant",
     temperature: 0
 }) 
 
 async function ai(){
-    let message = await model.invoke("hello")
-    let result = await parser.invoke(message);
+    let chain = await model.pipe(parser)
+    let result = await chain.invoke('hello')
     console.log(result);
 }
 
